@@ -6,6 +6,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const flash = require('express-flash')
 const logger = require('morgan')
+const cors = require('cors')
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
 const todoRoutes = require('./routes/todos')
@@ -35,6 +36,7 @@ app.use(
 // Passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
+app.use(cors())
 
 app.use(flash())
   
