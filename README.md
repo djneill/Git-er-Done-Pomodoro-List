@@ -1,46 +1,33 @@
-# Introduction
+# Getting Started
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+-Fork the code base, the button to fork is at the top right next to "Star". 
 
----
-
-> Be sure to add that lovely star 😀 and fork it for your own copy
-
----
+-Then you can click on "code" and download a zip or open your terminal and `cd desktop` then `git clone URL` the url can be copied from the "code" button.
 
 # Objectives
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+- Team project using MVC, model view controller, let's have fun.
 
----
+# Things to add
 
-# Who is this for? 
+- Create a `.env` file in the config folder and add the following as `key: value` 
+  - PORT: 3000 
+  - DB_STRING: `your database URI` 
 
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
-
----
-
-# Packages/Dependencies used 
-
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
-
----
-
+- Add these to you .gitignore file
+  node_modules
+  config/.env
+  
 # Install all the dependencies or node packages used for development via Terminal
 
 `npm install` 
 
----
-
-# Things to add
-
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
+# Packages/Dependencies used 
 
 
-# MVC-Group-Project
-# MVC-Group-Project
+`npm install bcrypt connect-mongo dotenv ejs express express-flash express-session mongodb mongoose morgan nodemon passport passport-local validator cors`
+
+If it prompts and audit fix then `npm audit fix`
+
+# Have fun testing and improving it! 😎
+
