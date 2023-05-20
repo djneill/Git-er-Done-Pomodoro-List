@@ -32,8 +32,8 @@ If it prompts and audit fix then `npm audit fix`
 # Have fun testing and improving it! 😎
 
 # Contributors
-[Adan Stan](https://github.com/adan-ayaz-stan) 
-[DJ Neill](https://github.com/djneill)
-[Maddy Ali](https://github.com/maddyali)
+<p>[Adan Stan](https://github.com/adan-ayaz-stan)</p>
+<p>[DJ Neill](https://github.com/djneill)</p>
+<p>[Maddy Ali](https://github.com/maddyali)</p>
 
 
