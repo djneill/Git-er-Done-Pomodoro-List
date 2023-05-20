@@ -27,20 +27,13 @@
     
     <!-- Timer -->
     <section>
-        <!-- Button container -->
-        <div>
-        <button>Pomodoro</button>
-        <button>Short break</button>
-        <button>Long break</button>
-        </div>
-        <!-- Clock -->
-        <div>
-        <span>25</span>
-        <span>:</span>
-        <span>00</span>
-        </div>
-        <!-- Start button -->
-        <button>Start</button>
+        <form action="/timer" method="POST">
+            <label for="minutes">Set timer (in minutes):</label>
+            <input type="number" id="minutes" name="minutes" min="1" required>
+            <button type="submit" name="action" value="start">Start</button>
+            <button type="submit" name="action" value="stop">Stop</button>
+            <button type="submit" name="action" value="reset">Reset</button>
+          </form>
     </section>
 
     <a href="/logout">Logout</a>
