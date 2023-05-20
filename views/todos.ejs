@@ -24,6 +24,17 @@
         <input type="text" placeholder="Enter Todo Item" name='todoItem'>
         <input type="submit">
     </form>
+    
+    <!-- Timer -->
+    <section>
+        <form action="/timer" method="POST">
+            <label for="minutes">Set timer (in minutes):</label>
+            <input type="number" id="minutes" name="minutes" min="1" required>
+            <button type="submit" name="action" value="start">Start</button>
+            <button type="submit" name="action" value="stop">Stop</button>
+            <button type="submit" name="action" value="reset">Reset</button>
+          </form>
+    </section>
 
     <a href="/logout">Logout</a>
 
