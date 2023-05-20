@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&display=swap");
+
+* {
+  border: 0;
+  outline: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "IBM Plex Sans Condensed";
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: solid 1px black;
+  z-index: -10;
+}
+
+.centered-content {
+  position: absolute;
+  top: 75%;
+  left: 0%;
+  transform: translate(0%, -50%);
+
+  width: 100%;
+
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+
+  padding: 0em 5em;
+}
+
+.centered-content h1 {
+  font-size: 3em;
+  line-height: 1.25em;
+  background: rgb(255, 133, 2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.centered-content p {
+  text-align: center;
+  color: black;
+
+  margin-bottom: 2em;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.link-button {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  padding: 0px 6px;
+  border: none;
+  background: linear-gradient(to right, #ff9900, #f36b3d);
+  color: whitesmoke;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.link-button svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+}
+
+.link-button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.link-button::before,
+.link-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.link-button::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.link-button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.link-button:active {
+  transform: scale(0.95);
+}
+
+@media only screen and (max-width: 1020px) {
+  .centered-content {
+    top: 50%;
+    padding: 1em;
+  }
+
+  .centered-content h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+}
