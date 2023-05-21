@@ -19,7 +19,6 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  display:flex;
   justify-content:center;
   align-items:center;
 }
@@ -105,6 +104,12 @@ img {
     justify-content: center;
     width: 100%;
     max-width: 626px; 
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
   }
 }
 
