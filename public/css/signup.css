@@ -253,3 +253,7 @@ button:hover::after {
 button:active {
   transform: translateX(0px);
 }
+
+.alert-box {
+  transform: translateY(65px);
+}
