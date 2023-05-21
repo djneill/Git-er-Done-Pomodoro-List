@@ -1,23 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/signup" method="POST">
-        <input type="text" name="userName" placeholder="User Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit">
-    </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/signup.css" />
+    <title>Get 'er done | Sign Up</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Content Side -->
+      <div class="form-side">
+        <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => {
+        %>
+        <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %> <% } %>
+
+        <div class="heading-wrapper">
+          <h1 contenteditable data-heading="Sign up">Sign up</h1>
+        </div>
+
+        <!-- Form Content Below -->
+        <form class="form" action="/signup" method="POST">
+          <ul class="wrapper">
+            <li style="--i: 5">
+              <input class="input" type="text" placeholder="Name" required="" />
+            </li>
+
+            <li style="--i: 4">
+              <input
+                class="input"
+                placeholder="Email"
+                required="true"
+                name="phone"
+                type="email"
+              />
+            </li>
+
+            <li style="--i: 3">
+              <input
+                class="input"
+                type="password"
+                placeholder="Password"
+                required=""
+                name="password"
+              />
+            </li>
+
+            <li style="--i: 2">
+              <input
+                class="input"
+                type="password"
+                placeholder="Confirm Password"
+                required=""
+                name="c-password"
+              />
+            </li>
+
+            <button style="--i: 1">Submit</button>
+          </ul>
+        </form>
+
+        <!-- <form action="/signup" method="POST">
+                <input type="text" name="userName" placeholder="User Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="confirmPassword" placeholder="Confirm Password">
+                <input type="submit">
+            </form> -->
+      </div>
+    </div>
+  </body>
 </html>
