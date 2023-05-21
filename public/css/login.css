@@ -19,7 +19,6 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  display:flex;
   justify-content:center;
   align-items:center;
 }
@@ -84,12 +83,37 @@ button {
 }
 
 img {
-  height: auto;
   width: 100%;
+  height: 80%;
   border-radius: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .row {
+    flex-direction:column;
+  }
+  .column {
+    justify-content: flex-start;
+  }
+  img {
+    width: 100%;
+    height: 90%;
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 626px; 
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .row {
     flex-direction:column;
   }
