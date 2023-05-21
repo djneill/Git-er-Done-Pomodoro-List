@@ -11,11 +11,6 @@
     <div class="container">
       <!-- Content Side -->
       <div class="form-side">
-        <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => {
-        %>
-        <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %> <% } %>
-
         <div class="heading-wrapper">
           <h1 contenteditable data-heading="Sign up">Sign up</h1>
         </div>
@@ -24,7 +19,13 @@
         <form class="form" action="/signup" method="POST">
           <ul class="wrapper">
             <li style="--i: 5">
-              <input class="input" type="text" placeholder="Name" required="" />
+              <input
+                class="input"
+                type="text"
+                placeholder="Name"
+                required=""
+                name="name"
+              />
             </li>
 
             <li style="--i: 4">
@@ -32,7 +33,7 @@
                 class="input"
                 placeholder="Email"
                 required="true"
-                name="phone"
+                name="email"
                 type="email"
               />
             </li>
@@ -53,13 +54,20 @@
                 type="password"
                 placeholder="Confirm Password"
                 required=""
-                name="c-password"
+                name="confirmPassword"
               />
             </li>
 
             <button style="--i: 1">Submit</button>
           </ul>
         </form>
+
+        <div class="alert-box">
+          <% if (locals.messages.errors) { %> <% messages.errors.forEach( el =>
+          { %>
+          <div class="alert alert-danger"><%= el.msg %></div>
+          <% }) %> <% } %>
+        </div>
 
         <!-- <form action="/signup" method="POST">
                 <input type="text" name="userName" placeholder="User Name">
