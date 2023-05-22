@@ -4,4 +4,4 @@ module.exports = {
         // TODO: Start the timer
         res.redirect('/timer');
       }
-}
+} 
