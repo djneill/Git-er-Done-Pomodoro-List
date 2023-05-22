@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/todos.css">
 </head>
+
 <body>
-    <h1>Git 'er Done Pomodoro List</h1>
-    <ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
+    <main>
+        <a href="/logout">Logout</a>
+        <div class="container">
+            <!-- Timer -->
+            <section>
+                <div class="timer-wrapper">
+                    <!-- Display the remaining time above the form -->
+                    <!-- <p>Remaining Time: carrot%= remainingTime %> minutes</p> -->
+                    <form action="/timer" method="POST">
+                        <label for="minutes">Set timer (in minutes):</label>
+                        <input type="number" id="minutes" name="minutes" min="1" required>
+                        <button type="submit" name="action" value="start">Start</button>
+                        <button type="submit" name="action" value="stop">Stop</button>
+                        <button type="submit" name="action" value="reset">Reset</button>
+                    </form>
+                    <!-- Display the remaining time below the form -->
+                    <!-- <p>Remaining Time: carrot%= remainingTime %> minutes</p> -->
+                </div>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+            </section>
+            <h1 class="section-title">Git 'er Done Pomodoro List</h1>
+            <ul>
+                <% todos.forEach( el=> { %>
+                    <li class='todoItem' data-id='<%=el._id%>'>
+                        <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.todo %></span>
+                        <span class='del'> <i class="fa-solid fa-trash-can pointer"></i> </span>
+                    </li>
+                    <% }) %>
+            </ul>
 
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
-    </form>
-    
-    <!-- Timer -->
-    <section>
-        <form action="/timer" method="POST">
-            <label for="minutes">Set timer (in minutes):</label>
-            <input type="number" id="minutes" name="minutes" min="1" required>
-            <button type="submit" name="action" value="start">Start</button>
-            <button type="submit" name="action" value="stop">Stop</button>
-            <button type="submit" name="action" value="reset">Reset</button>
-          </form>
-    </section>
+            <form action="/todos/createTodo" method='POST'>
+                <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+                <input type="submit">
+            </form>
 
-    <a href="/logout">Logout</a>
+            <h2>
+                <%= user.userName %> has <%= left %> things left to do.
+            </h2>
+        </div>
+    </main>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
