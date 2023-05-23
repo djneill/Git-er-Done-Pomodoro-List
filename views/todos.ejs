@@ -15,14 +15,13 @@
 
 <body>
     <main>
-        <a href="/logout">Logout</a>
         <div class="container">
             <!-- Timer -->
             <section>
                 <div class="timer-wrapper">
                     <!-- Display the remaining time above the form -->
                     <!-- <p>Remaining Time: carrot%= remainingTime %> minutes</p> -->
-                    <form action="/timer" method="POST">
+                    <form class="set-timer" action="/timer" method="POST">
                         <label for="minutes">Set timer (in minutes):</label>
                         <input type="number" id="minutes" name="minutes" min="1" required>
                         <button type="submit" name="action" value="start">Start</button>
@@ -49,9 +48,12 @@
                 <input type="submit">
             </form>
 
-            <h2>
-                <%= user.userName %> has <%= left %> things left to do.
-            </h2>
+            <div class="foot-container">
+                <h2 class="section-title">
+                    <%= user.userName %> has <%= left %> things left to do.
+                </h2>
+                <a class="logout" href="/logout">Logout</a>
+            </div>
         </div>
     </main>
 
