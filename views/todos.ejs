@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/todos.css">
+
 </head>
 
 <body>
@@ -35,9 +36,9 @@
 
             </section>
             <h1 class="section-title">Git 'er Done Pomodoro List</h1>
-            <ul>
+            <ul id="sortableList">
                 <% todos.forEach( el=> { %>
-                    <li class='todoItem' data-id='<%=el._id%>'>
+                    <li class='todoItem sortableItem' data-id='<%=el._id%>'>
                         <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.todo %></span>
                         <span class='del'> <i class="fa-solid fa-trash-can pointer"></i> </span>
                     </li>
@@ -55,7 +56,9 @@
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script src="js/main.js"></script>
+    
 </body>
 
 </html>

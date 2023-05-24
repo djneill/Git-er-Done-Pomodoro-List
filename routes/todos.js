@@ -11,6 +11,8 @@ router.put("/markComplete", todosController.markComplete);
 
 router.put("/markIncomplete", todosController.markIncomplete);
 
+router.put("/updateTasksOrder", todosController.updateTasksOrder);
+
 router.delete("/deleteTodo", todosController.deleteTodo);
 
 module.exports = router;
