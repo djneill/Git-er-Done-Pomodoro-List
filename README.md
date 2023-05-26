@@ -37,3 +37,4 @@ If it prompts and audit fix then `npm audit fix`
 <p>[DJ Neill](https://github.com/djneill)</p>
 <p>[Maddy Ali](https://github.com/maddyali)</p>
 <p>[Shannan Bunch](https://github.com/funbunch)</p>
+<p>[Christopher Munoz](https://github.com/ChrisMunozCodes)</p>
