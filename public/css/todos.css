@@ -182,7 +182,7 @@ li span.not {
 
 .timer-wrapper form button {
   appearance: none;
-  background-color: transparent;
+  background-color: white;
   border: 0.125em solid #1a1a1a;
   border-radius: 0.9375em;
   box-sizing: border-box;
@@ -256,6 +256,7 @@ li span.not {
   font-weight: 600;
   font-size: 1.25em;
 
+  background: white;
   border-radius: 999px;
   border: solid 2px black;
 }
@@ -292,7 +293,7 @@ li span.not {
 
 .logout:hover,
 .logout:active {
-  background-color: initial;
+  background-color: white;
   background-position: 0 0;
   color: #ff4742;
 }
