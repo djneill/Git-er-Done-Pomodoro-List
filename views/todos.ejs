@@ -20,40 +20,48 @@
             <!-- Timer -->
             <section>
                 <div class="timer-wrapper">
-                <form id="timerForm" action="/timer" method="POST">
-                    <label for="minutes">Set timer (in minutes):</label>
-                    <input type="number" id="minutes" name="minutes" min="1" required>
-                    <button class="timerStart" type="submit" name="action" value="start">Start</button>
-                    <button type="submit" name="action" value="pause">Pause</button>
-                    <button type="submit" name="action" value="reset">Reset</button>
-                </form>
+                    <form id="timerForm" action="/timer" method="POST">
+                        <div>
+                            <label for="minutes">Set timer (in minutes):</label>
+                            <input type="number" id="minutes" name="minutes" min="1" required>
+                        </div>
 
-                <span class="showTime"></span>
+                        <div>
+                            <button class="timerStart" type="submit" name="action" value="start">Start</button>
+                            <button type="submit" name="action" value="pause">Pause</button>
+                            <button type="submit" name="action" value="reset">Reset</button>
+                        </div>
+                    </form>
+
+                    <span class="showTime">00:00:00</span>
 
                 </div>
 
             </section>
-            <h1 class="section-title">Git 'er Done Pomodoro List</h1>
-            <ul id="sortableList">
-                <% todos.forEach( el=> { %>
-                    <li class='todoItem sortableItem' data-id='<%=el._id%>'>
-                        <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.todo %></span>
-                        <span class='del'> <i class="fa-solid fa-trash-can pointer"></i> </span>
-                    </li>
-                    <% }) %>
-            </ul>
 
-            <form class="todo" action="/todos/createTodo" method='POST'>
-                <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-                <input type="submit">
-            </form>
+            <section>
+                <h1 class="section-title">Git 'er Done Pomodoro List</h1>
+                <ul id="sortableList">
+                    <% todos.forEach( el=> { %>
+                        <li class='todoItem sortableItem' data-id='<%=el._id%>'>
+                            <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.todo %></span>
+                            <span class='del'> <i class="fa-solid fa-trash-can pointer"></i> </span>
+                        </li>
+                        <% }) %>
+                </ul>
 
-            <div class="foot-container">
-                <h2 class="section-title">
-                    <%= user.userName %> has <%= left %> things left to do.
-                </h2>
-                <a class="logout" href="/logout">Logout</a>
-            </div>
+                <form class="todo" action="/todos/createTodo" method='POST'>
+                    <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+                    <button type="submit">Add task</button>
+                </form>
+
+                <div class="foot-container">
+                    <h2 class="section-title">
+                        You have <%= left %> things left to do.
+                    </h2>
+                    <a class="logout" href="/logout">Logout</a>
+                </div>
+            </section>
         </div>
     </main>
 
