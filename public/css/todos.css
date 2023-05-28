@@ -1,226 +1,351 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&display=swap");
 
 * {
-    border: 0;
-    outline: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
- body {
-background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%234FE'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-  
+
+body {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='376' height='45.1' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23F3E9E4' stroke-width='6' stroke-opacity='0.5'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 main {
-    font-family: "IBM Plex Sans Condensed", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #333;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333;
 }
 
-h1, h2 {
-    color: #ff4040;;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    gap: 1rem;
-    padding: 0em 5em;
-    height: 100vh;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center; /* Align the list items horizontally center */
-  }
-
-li {
-    list-style-type: none;
-    text-decoration: none;
-    padding: 0.5em;
-    margin: 0.5em;
-    border-radius: 5px;
-    background-color: #b0e2ff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-li:hover {
-    background-color: #b2df8a;
-    
+h1,
+h2 {
+  color: #242424;
+  line-height: 1.15em;
 }
 
 .section-title {
-    position: relative;
-    display: inline-block;
-    perspective: 500px; /* Adjust the perspective value for the desired depth */
-  }
-  
-  .section-title h2 {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    transform-style: preserve-3d;
-    transform: rotateX(30deg) rotateY(0deg) rotateZ(0deg); /* Adjust the rotation angles */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-  
-  .section-title:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -20px;
-    right: -10px;
-    bottom: 5px;
-    background-color: #444; /* Adjust the background color for the side */
-    transform-origin: center bottom;
-    transform: skewX(-30deg) scaleY(0.8);
-    z-index: -1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-  
-
-i {
-    margin-left: 1rem;
-    float: right;
+  margin-bottom: 20px;
 }
 
-.pointer {
-    cursor: pointer;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+
+  gap: 1rem;
+  padding: 0em 5em;
+  height: 100vh;
 }
 
-.pointer:hover {
-    color: #ff9900;
+.container section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container section:nth-child(2) {
+  padding: 50px 50px;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 12px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Align the list items horizontally center */
+}
+
+li {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0.75em;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+  border: solid 2px black;
+}
+
+li span.not {
+  text-decoration: none;
+}
+
+.del {
+  transition: all 0.4s ease;
+  padding: 5px 5px;
+}
+
+.del:hover {
+  color: red;
+  background-color: #f1f1f1;
+  padding: 5px 20px;
+  border-radius: 12px;
+}
+
+.todo {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 20px 0px;
+  margin: 20px 0px;
+}
+
+.todo input {
+  --input-focus: #2f2f2f;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+.todo input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.todo input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.todo button {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.todo button:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
 }
 
 .timer-wrapper {
-    display: inline-block;
-    align-items: center;    
-    border: 1px solid #000;
-    border-radius: 50px; /* Adjust the value to change the oval shape */
-    padding: 10px;
-    font-family: monospace;
-    font-size: 24px;
-    text-align: center;
-    background-color: #b0e2ff; 
-    color: #333;
-    width: 400px; /* Adjust the width to fit your content */
-    height: auto; /* Adjust the height to fit your content */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.timer-wrapper form {
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+}
+
+.timer-wrapper form div {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 12px;
+}
+
+.timer-wrapper form button {
+  appearance: none;
+  background-color: white;
+  border: 0.125em solid #1a1a1a;
+  border-radius: 0.9375em;
+  box-sizing: border-box;
+  color: #3b3b3b;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 3.75em;
+  min-width: 0;
+  outline: none;
+  padding: 1em 2.3em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+.timer-wrapper form button:disabled {
+  pointer-events: none;
+  color: gray;
+  border: solid 2px lightgray;
+}
+
+.timer-wrapper form button:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.timer-wrapper form button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.timer-wrapper form input {
+  max-width: 70px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+  border: solid 1px black;
+  outline: none;
+  color: dimgray;
+  -moz-appearance: textfield;
+}
+
+.timer-wrapper form input:invalid {
+  animation: justshake 0.3s forwards;
+  color: red;
+}
+
+.showTime {
+  height: 200px;
+  width: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  font-size: 1.25em;
+
+  background: white;
+  border-radius: 999px;
+  border: solid 2px black;
+}
+
+.logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  text-decoration: none;
+  background: #ff4742;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.logout:hover,
+.logout:active {
+  background-color: white;
+  background-position: 0 0;
+  color: #ff4742;
+}
+
+.logout:active {
+  opacity: 0.5;
+}
+
+@keyframes justshake {
+  25% {
+    transform: translateX(5px);
   }
 
-  form.todo {
-    display: flex;
+  50% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX-(5px);
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  h1,
+  h2 {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 100px 0px !important;
+  }
+  .container section:nth-child(2) {
+    padding: 10px;
+  }
+
+  .todo {
     justify-content: center;
   }
-  
-  .todo input[type="text"] {
-    border: none;
-    border-radius: 20px; /* Adjust the value to change the oval shape */
-    width: 200px;
-    padding: 10px;
-    margin-right: .5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the shadow properties as needed */
-  }
-  
-  .todo input[type="submit"] {
-    border: none;
-    border-radius: 20px; /* Adjust the value to change the oval shape */
-    padding: 10px 20px;
-    margin-left: .5rem;
-    background-color: #b0e2ff;
-    color: #333;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the shadow properties as needed */
-  }
-  
-  .todo input[type="submit"]:hover {
-    background-color: #b2df8a; /* Adjust the hover background color as desired */
+
+  .timer-wrapper {
+    padding: 0px;
   }
 
-  .set-timer input[type="number"],
-  .set-timer button {
-    border: none;
-    outline: none;
-    padding: 5px;
-    border-radius: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    font-family: sans-serif;
-    font-size: 16px;
-    text-align: center;
-    background-color: #fff;
-    color: #000000;
+  .timer-wrapper form div:nth-child(2) {
+    flex-flow: column;
   }
-
-  .set-timer input[type="number"] {
-    width: 150px;
-  }
-
-  .set-timer button {
-    margin: 2px;
-    cursor: pointer;
-  }
-
-  .set-timer button:hover {
-    background-color: #b2df8a;
-  }
-
-  .foot-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row;
-    gap: 1rem;
-    padding: 0em 5em;
-  }
-
-  .logout {
-    border: none;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 40px; /* Adjust the value to change the oval shape */
-    padding: 10px 20px;
-    margin-left: .5rem;
-    background-color: rgb(244, 161, 161);
-    color: #333;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the shadow properties as needed */
-  }
-
-  .logout:hover {
-    background-color: red;
-  }
-  
-  @media  screen and (max-width: 480px) {
-    .container {
-      padding: 0em .5em;
-    }
-    .timer-wrapper {
-      width: 100%;
-    }
-    .section-title {
-      font-size: 1.5rem;
-    }
-    .foot-container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: .5rem;      
-      font-size: .5rem;
-    }
-  }
-    
-  
+}
