@@ -99,39 +99,39 @@ async function markIncomplete() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    var sortableList = document.getElementById("sortableList");
-    Sortable.create(sortableList, {
-      animation: 150, // Set animation duration in milliseconds
-      // Add any additional Sortable options as needed
-      // ...
-      onUpdate: async function (event) {
-        // Callback function triggered when the order is updated
-        var updatedOrder = Array.from(sortableList.children).map(function (
-          item,
-          ind
-        ) {
-          return {
-            taskId: item.dataset.id,
-            taskName: item.innerText,
-            order: ind + 1,
-          };
-        });
-        // You can send the updated order to the server or perform any other actions
-        try {
-          const response = await fetch("todos/updateTasksOrder", {
-            method: "PUT",
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify({
-              newTasks: updatedOrder,
-            }),
-          }).then((data) => data.json());
-          console.log(response);
-          // location.reload();
-        } catch (err) {
-          console.log(err);
-        }
-      },
-    });
+  var sortableList = document.getElementById("sortableList");
+  Sortable.create(sortableList, {
+    animation: 150, // Set animation duration in milliseconds
+    // Add any additional Sortable options as needed
+    // ...
+    onUpdate: async function (event) {
+      // Callback function triggered when the order is updated
+      var updatedOrder = Array.from(sortableList.children).map(function (
+        item,
+        ind
+      ) {
+        return {
+          taskId: item.dataset.id,
+          taskName: item.innerText,
+          order: ind + 1,
+        };
+      });
+      // You can send the updated order to the server or perform any other actions
+      try {
+        const response = await fetch("todos/updateTasksOrder", {
+          method: "PUT",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify({
+            newTasks: updatedOrder,
+          }),
+        }).then((data) => data.json());
+        console.log(response);
+        // location.reload();
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  });
 });
 
 pauseButton.disabled = true;
@@ -190,6 +190,12 @@ function padNumber(number) {
   return String(number).padStart(2, "0");
 }
 
+function playAlarm() {
+  // Create an audio element
+  const audio = new Audio("/arcade.wav");
+  audio.play();
+}
+
 function updateCountdown() {
   if (!isTimerRunning) {
     return;
@@ -242,6 +248,9 @@ function updateCountdown() {
     // Disables the pause button when the timer ends.
     const pauseButton = document.querySelector('button[value="pause"]');
     pauseButton.disabled = true;
+    // Play the alarm sound
+    playAlarm();
+    return;
   }
 }
 
