@@ -1,5 +1,20 @@
 const Timer = require("../models/Timer");
 const { formatTime } = require("../utilities/timeFormat");
+const fs = require('fs')
+// alarm sound
+// const playSound = require("play-sound")();
+
+// const playAlarm = () => {
+//   const soundPath = "/arcade.wav";
+
+//   playSound.play(soundPath, (err) => {
+//     if (err) {
+//       console.error("Error playing alarm sound:", err);
+//     }
+//   });
+// };
+
+
 
 let countdownSeconds = 0;
 let countdownFormat = null;
@@ -39,6 +54,8 @@ module.exports = {
                 res.status(500).json({ error: "An error occurred" });
               }
             });
+            // play alarm
+            // playAlarm();
 
           return;
         }
