@@ -7,7 +7,7 @@ To do task list that can be reordered with an integrated pomodoro timer.
 Take a look at it here 👉 https://giterdonepomodoro.onrender.com/
 
 <h2 align="center">Tech Used</h2> 
-<p align="center"> HTML5, CSS3, EJS, Javascript, Bootstrap, Font Aswesome, Node.js, Express, Passport.js, MVC paradigm </p>
+<p align="center"> HTML5, CSS3, EJS, Javascript, Bootstrap, Font Aswesome, Node.js, Express, Passport.js, MongoDB, Mongoose, MVC paradigm </p>
 
 <h2 align="center">Goals and Accomplishments</h2>
 Many of us plan out our days with a list of task that we need or want to accomplish, how often do you acctually finish that list? Maddy suggested using a Pomodoro timer to help stay on schedule, and unanimously we all thought it was a great idea. The five of us got together to build a to do list that could be reorganized and saved to a mongoDB database. We built an integrated timer that plays a soft one second alarm when the time has expired. We then used Passport.js so the user could sign into their own account securly with an authenticate hash parameter.
