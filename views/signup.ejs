@@ -1,85 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/signup.css" />
-    <title>Git 'er Done</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io (4)/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io (4)/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io (4)/favicon-16x16.png">
-  </head>
-  <body>
-    <div class="container">
-      <!-- Content Side -->
-      <div class="form-side">
-        <div class="heading-wrapper">
-          <h1 contenteditable data-heading="Sign up">Sign up</h1>
-        </div>
 
-        <!-- Form Content Below -->
-        <form class="form" action="/signup" method="POST">
-          <ul class="wrapper">
-            <li style="--i: 5">
-              <input
-                class="input"
-                type="text"
-                placeholder="Name"
-                required=""
-                name="name"
-              />
-            </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Git er Done Pomodoro List">
+  <meta property="og:url" content="https://giterdonepomodoro.onrender.com" />
+  <meta property="og:title" content="Git er Done" />
+  <meta property="og:description" content="Git er Done Pomodoro List" />
+  <meta property="og:site_name" content="Git er Done" />
+  <meta property="og:image" content="https://giterdonepomodoro.onrender.com/public/img/metaimg.png" />
+  <meta property="fb:app_id" content="000000" /> <!-- Used for Domain Insights -->
+  <meta property="og:type" content="website" /> <!-- website is deafult -->
+  <meta property="og:locale" content="en_US" /> <!-- en_US is deafult -->
+  <title>Git 'er Done</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io (4)/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io (4)/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io (4)/favicon-16x16.png">
+  <link rel="stylesheet" href="css/signup.css" />
+</head>
 
-            <li style="--i: 4">
-              <input
-                class="input"
-                placeholder="Email"
-                required="true"
-                name="email"
-                type="email"
-              />
-            </li>
+<body>
+  <div class="container">
+    <!-- Content Side -->
+    <div class="form-side">
+      <div class="heading-wrapper">
+        <h1 contenteditable data-heading="Sign up">Sign up</h1>
+      </div>
 
-            <li style="--i: 3">
-              <input
-                class="input"
-                type="password"
-                placeholder="Password"
-                required=""
-                name="password"
-              />
-            </li>
+      <!-- Form Content Below -->
+      <form class="form" action="/signup" method="POST">
+        <ul class="wrapper">
+          <li style="--i: 5">
+            <input class="input" type="text" placeholder="Name" required="" name="name" />
+          </li>
 
-            <li style="--i: 2">
-              <input
-                class="input"
-                type="password"
-                placeholder="Confirm Password"
-                required=""
-                name="confirmPassword"
-              />
-            </li>
+          <li style="--i: 4">
+            <input class="input" placeholder="Email" required="true" name="email" type="email" />
+          </li>
 
-            <button style="--i: 1">Submit</button>
-          </ul>
-        </form>
+          <li style="--i: 3">
+            <input class="input" type="password" placeholder="Password" required="" name="password" />
+          </li>
 
-        <div class="alert-box">
-          <% if (locals.messages.errors) { %> <% messages.errors.forEach( el =>
-          { %>
-          <div class="alert alert-danger"><%= el.msg %></div>
-          <% }) %> <% } %>
-        </div>
+          <li style="--i: 2">
+            <input class="input" type="password" placeholder="Confirm Password" required="" name="confirmPassword" />
+          </li>
 
-        <!-- <form action="/signup" method="POST">
+          <button style="--i: 1">Submit</button>
+        </ul>
+      </form>
+
+      <div class="alert-box">
+        <% if (locals.messages.errors) { %>
+          <% messages.errors.forEach( el=>
+            { %>
+            <div class="alert alert-danger">
+              <%= el.msg %>
+            </div>
+            <% }) %>
+              <% } %>
+      </div>
+
+      <!-- <form action="/signup" method="POST">
                 <input type="text" name="userName" placeholder="User Name">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
                 <input type="password" name="confirmPassword" placeholder="Confirm Password">
                 <input type="submit">
             </form> -->
-      </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
