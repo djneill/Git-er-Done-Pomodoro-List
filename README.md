@@ -18,8 +18,10 @@ Optimized this to fit all screen sizes as best as possible. The goal was for the
 
 # Contributors
 
-<p>[Adan Ayaz](https://github.com/adan-ayaz-stan)</p>
+<p><img align="center" src="https://contributors-img.web.app/image?repo=djneill/Git-er-Done-Pomodoro-List"/></p>
+
 <p>[DJ Neill](https://github.com/djneill)</p>
+<p>[Adan Ayaz](https://github.com/adan-ayaz-stan)</p>
 <p>[Maddy Ali](https://github.com/maddyali)</p>
 <p>[Shannan Bunch](https://github.com/funbunch)</p>
 <p>[Christopher Munoz](https://github.com/ChrisMunozCodes)</p>
