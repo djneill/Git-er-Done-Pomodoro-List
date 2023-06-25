@@ -4,7 +4,8 @@
 
 To do task list that can be reordered with an integrated pomodoro timer.
 
-Take a look at it here 👉 https://giterdonepomodoro.onrender.com/
+<p>Take a look at it here 👉 https://giterdonepomodoro.onrender.com/</p>
+<p></p>*Render does take a minute to spin up the first time*</p>
 
 <h2 align="center">Tech Used</h2> 
 <p align="center"> HTML5, CSS3, EJS, Javascript, Bootstrap, Font Aswesome, Node.js, Express, Passport.js, MongoDB, Mongoose, MVC paradigm </p>
